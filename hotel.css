@@ -1,0 +1,70 @@
+html{
+  background-color: black;
+}
+
+.header{
+background-color: black;
+color:white;
+text-align: center;
+width:100%;
+margin:auto;
+font-familiy:georgia;
+}
+
+.button {
+  height:40px;
+  width:33.33%;
+  float:left;
+  color:white;
+  background-color: black;
+}
+
+.button a:hover{
+  background-color: #282626;
+}
+
+.button a, a:visited{
+    color:inherit;
+    padding: 10px 16px;
+    display:block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu{
+  padding-top:25px;
+  height: 33px;
+  width: 100%;
+  background-color:black;
+  border-bottom: 10px solid white;
+  margin:auto;
+  text-align: center;
+}
+
+.content{
+  background-color:black;
+  color:white;
+  width: 100%;
+  padding-top:1px;
+  padding-bottom:3px;
+  margin:auto;
+  font-family: verdana;
+}
+
+.footer{
+  padding-top: 3px;
+  width:100%;
+  background-color:black;
+  color:white;
+  text-align: center;
+  width: 100%;
+  padding-bottom:3px;
+  padding-top: 30px;
+}
+
+table ,th, td{
+  margin:auto;
+  text-align: center;
+  border:1px solid white;
+  padding:8px;
+}

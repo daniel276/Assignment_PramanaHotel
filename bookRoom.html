@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Booking Room</title>
+    <link rel="stylesheet" href="hotel.css">
+  </head>
+
+  <script>
+    function inputCheck(){
+      var time = new Date();
+      var dateBook = document.forms["user_form"]["dateStay"].value;
+
+        if(time.getTime()>=new Date(dateBook).getTime()){ // only allow user to pick a date in the future
+          alert("Book Date cannot be less than current date!");
+          return false;
+        }else{
+          window.open("succesfully.html");
+      }
+}
+  </script>
+  <body>
+    <div class="header">
+    <img src="logo2.png" alt="">
+    </div>
+
+    <div class="menu">
+    <div class="button"><a href="pramanaHotel.html"> HOME </a></div>
+    <div class="button"><a href="facility.html"> FACILITY </a></div>
+    <div class="button"><a href="bookRoom.html"> BOOK ROOM </a></div>
+    </div>
+
+<div class="content" style="text-align:center;">
+<table>
+  <form name="user_form" method="POST" onsubmit="event.preventDefault(); inputCheck();">
+  <tr><th colspan="2">BOOK ROOM</th></tr>
+
+  <tr>
+    <td>Name : </td>
+    <td><input type="text" name="firstname" required></td>
+  </tr>
+  <tr>
+    <td>Email : </td>
+    <td><input type="email" name="emailUser" required></td>
+</tr>
+<tr>
+  <td>Phone : </td>
+  <td><input type="tel" name="phoneUser" required onkeypress='return event.charCode >= 48 && event.charCode <= 57'></td>
+</tr>
+
+  <tr>
+    <td>Stay In Date : </td>
+    <td><input type="date" name="dateStay" required</td>
+  </tr>
+
+  <tr>
+    <td>Length Stay : </td>
+    <td><input type="number" name="lengthStay" min=1 required onkeypress='return event.charCode >= 49 && event.charCode <= 57'></td>
+  </tr>
+
+  <tr>
+    <td>Room Type : </td>
+    <<td><select>
+    <option value="null">Select One</option>
+    <option value="Deluxe Room">Deluxe Room - $274</option>
+    <option value="deluxeRoom">Deluxe Room - $274</option>
+    <option value="deluxePool">Deluxe Pool Villa - $438</option>
+    <option value="1PoolVilla">1 Bedroom Pool Villa - $525</option>
+    <option value="2PoolVilla">2 Bedroom Pool Villa - $635</option>
+    </select></td>
+  </tr>
+
+  <tr>
+    <td>Additional Charge</td>
+    <td>
+      <input type="checkbox" name="extraBed">Extra Bed - $80</input><br>
+      <input type="checkbox" name="shuttle">Airport Shuttle - $40</input><br>
+      <input type="checkbox" name="ubudTour">Ubud Tour one day - $100</input><br>
+    </td>
+
+<tr>
+  <td colspan="2"><input type="submit" ></td>
+</form>
+</table>
+</form>
+</div>
+
+<div class="footer">
+  <p>©2017 Pramana Experience - All Rights Reserved.</p>
+
+</div>
+
+  </body>
+</html>
