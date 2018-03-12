@@ -15,10 +15,12 @@
           alert("Book Date cannot be less than current date!");
           return false;
         }else{
-          window.open("succesfully.html");
+          return true;
       }
 }
   </script>
+
+
   <body>
     <div class="header">
     <img src="logo2.png" alt="">
@@ -32,7 +34,7 @@
 
 <div class="content" style="text-align:center;">
 <table>
-  <form name="user_form" method="POST" onsubmit="event.preventDefault(); inputCheck();">
+  <form name="user_form" method="POST" action="book.php" >
   <tr><th colspan="2">BOOK ROOM</th></tr>
 
   <tr>
@@ -60,22 +62,21 @@
 
   <tr>
     <td>Room Type : </td>
-    <<td><select>
+    <<td><select name="roomType">
     <option value="null">Select One</option>
-    <option value="Deluxe Room">Deluxe Room - $274</option>
-    <option value="deluxeRoom">Deluxe Room - $274</option>
-    <option value="deluxePool">Deluxe Pool Villa - $438</option>
-    <option value="1PoolVilla">1 Bedroom Pool Villa - $525</option>
-    <option value="2PoolVilla">2 Bedroom Pool Villa - $635</option>
+    <option value="deluxe room">Deluxe Room - $274</option>
+    <option value="deluxe pool villa">Deluxe Pool Villa - $438</option>
+    <option value="deluxe pool 1 br">1 Bedroom Pool Villa - $525</option>
+    <option value="deluxe pool 2br">2 Bedroom Pool Villa - $635</option>
     </select></td>
   </tr>
 
   <tr>
     <td>Additional Charge</td>
     <td>
-      <input type="checkbox" name="extraBed">Extra Bed - $80</input><br>
-      <input type="checkbox" name="shuttle">Airport Shuttle - $40</input><br>
-      <input type="checkbox" name="ubudTour">Ubud Tour one day - $100</input><br>
+      <input type="checkbox" name="extraBed" value="1">Extra Bed - $80</input><br>
+      <input type="checkbox" name="shuttle" value="1">Airport Shuttle - $40</input><br>
+      <input type="checkbox" name="ubudTour" value="1">Ubud Tour one day - $100</input><br>
     </td>
 
 <tr>
